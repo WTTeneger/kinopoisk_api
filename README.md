@@ -3,7 +3,7 @@
 ## content
 
 0. [introduction](#introduction)
-1. [Заголовки](#Заголовки)
+1. [Getting started](#Getting-started)
 2. [Работа с выделением текста](#Работа-с-выделением-текста)
 3. [Использование эмодзи (emoji)](#Использование-эмодзи-emoji)
 4. [Использование цитирования в тексте](#Использование-цитирования-в-тексте)
@@ -19,12 +19,11 @@
 10. [Дополнения](https://github.com/GnuriaN/format-README/blob/master/Дополнения.md)
     
 ## introduction
-При использовании
 This API is used to get data from the kinopoisk website
 ____
 [:arrow_up:content](#content)
 ___
-## Заголовки
+## Getting started
 
 Всего существует шесть уровней заголовков. Для того, чтобы создать заголовок, необходимо в начале строки добавить символы `#`, в количестве равном его уровню.
 ____
