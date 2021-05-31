@@ -25,7 +25,8 @@ ____
 ___
 ## Getting started
 
-To work, you will need the library
+>To work
+> >you will need the library
 [Requests](https://pypi.org/project/requests/) 
 
 As well as the API key, which can be obtained on the site 
