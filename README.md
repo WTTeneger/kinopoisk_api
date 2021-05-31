@@ -6,7 +6,6 @@
 1. [Getting started](#Getting-started)
 2. [Working with code](#Working-with-code)
 3. [Description of functions](#Description-of-functions)
-4. [Arguments](#Arguments)
     
 ## introduction
 This API is used to get data from the kinopoisk website
