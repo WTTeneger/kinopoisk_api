@@ -45,13 +45,10 @@ ____
 [:arrow_up:content](#content)
 ____
 ## Description of functions
-| tile | Description | Call example|
+| tile | Description | type |
 |----:|:----:|:----------|
 | literal | Строка содержит символьный литерал literal | foo |
 | re1&#124;re2 | Строка содержит регулярные выражения `rel` или `re2` | foo&#124;bar |
-| поиск по ключевуму слову | Принимает ввденённый текст и ищет совпадения | ```py 
-get_by_keyword(text)
-``` |
 
 
 
