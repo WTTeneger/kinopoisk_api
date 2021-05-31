@@ -46,99 +46,79 @@ ____
 ____
 ## Description of functions
 
-#### Поиск по ключевому слову
+### Films
+#### Search by keyword
 ```py
 object_api.get_by_keyword(text)
 ```
 ____
-#### Поиск по id на кинопоиске
+#### Search by id on kinopoisk
 ```py
 object_api.get_data_film(id_kinopoisk, append_to_response='RATING')
 ```
 ____
-#### Берём скришоты из фильма
+#### We take screenshots from the movie
 ```py
 object_api.get_frame_film(id_kinopoisk)
 ```
 ____
-#### Берём видео связанные с фильма (трейлеры, вырезки)
+#### We take videos related to the film (trailers, clippings)
 ```py
 object_api.get_trailer_film(id_kinopoisk)
 ```
 ____
-#### Берём сиквелы и приквелы фильма
+#### We take the sequels and prequels of the film
 ```py
 object_api.get_sequels_and_prequels_film(id_kinopoisk)
 ```
 ____
-#### Берём все фильтры
+#### We take all the filters
 ```py
 object_api.get_filters()
 ```
 ____
-#### Берём фильмы по фильтру
+#### We take movies by filter
 ```py
 object_api.get_film_in_filters(counry=[], genre=[], order = 'RATING', types='ALL', ratingFrom=0, ratingTo=10, yearFrom=1888, yearTo=2021, page=1)
 ```
 ____
-#### Берём фильмы по топу
+#### We take films by the top
 ```py
 object_api.get_top_films(types='TOP_100_POPULAR_FILMS', page=1)
 ```
 ____
-#### Берём похожие фильмы
+#### We take similar movies
 ```py
 object_api.et_similars_film(id_kinopoisk)
 ```
 ____
-#### Берём фильмы которые вышли по фильтру
+#### We take the films that were released by the filter
 ```py
 object_api.get_releaze_film(year = 2021, month = 'JANUARY', page=1)
 ```
 ____
-#### Берём данные по студии которая снимала
+#### We take data on the studio that was shooting
 ```py
 object_api.get_studios_date(id_kinopoisk)
 ```
-____
-#### Берём данные по студии которая снимала
-```py
-object_api.get_studios_date(id_kinopoisk)
-```
-____
-### Films
-#### Берём отзывы
+### reviews
+#### We take reviews
 ```py
 object_api.get_reviews(id_kinopoisk, page=1)
 ```
 ____
-#### Берём подробный отзывы
+#### We take detailed reviews
 ```py
 object_api.get_reviews_details(id_reviews)
 ```
-____
 ### Staff
-#### Берём всех кто работал над фильмом
+#### We take everyone who worked on the film
 ```py
 object_api.get_staff(id_kinopoisk)
 ```
 ____
-#### Берём подробную информацию о работнике
+#### erem detailed information about the employee
 ```py
 object_api.get_staff_details(id_person)
 ```
-____
-
-
-
-
-
-
-
-
-
-## Arguments
-| Обозначение | Описание | Пример регулярного выражения|
-|----:|:----:|:----------|
-| literal | Строка содержит символьный литерал literal | foo |
-| re1&#124;re2 | Строка содержит регулярные выражения `rel` или `re2` | foo&#124;bar |
+[:arrow_up:content](#content)
