@@ -30,12 +30,23 @@ ___
 
 ### As well as the API key, which can be obtained on the site 
 [kinopoiskapiunofficial](https://kinopoiskapiunofficial.tech/user)
+
+### Install the Library
+[filmapis](https://pypi.org/project/filmapis)
+```
+pip install filmapis
+```
+
+### Connecting the library
+```py
+import filmapis.filmapis as fa
+```
 ____
 [:arrow_up:content](#content)
 ____
 ## Working with code
 
-###Creating an object is performed by passing the api key received from the site to the function 
+### Creating an object is performed by passing the api key received from the site to the function 
 [site](https://kinopoiskapiunofficial.tech/user)
 ```py
 object_api = API_Cinema('API-KEY')
