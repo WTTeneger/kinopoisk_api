@@ -5,7 +5,7 @@
 0. [introduction](#introduction)
 1. [Getting started](#Getting-started)
 2. [Working with code](#Working-with-code)
-3. [Использование эмодзи (emoji)](#Использование-эмодзи-emoji)
+3. [Description of functions](#Description-of-functions)
 4. [Использование цитирования в тексте](#Использование-цитирования-в-тексте)
 5. [Подсветка кода](#Подсветка-кода)
 6. [Списки](#Списки)
@@ -51,6 +51,20 @@ ____
 ```py
 object_api = API_Cinema('API-KEY')
 ```
+###Creating an object with the access key obtained on the site 
+[kinopoiskapiunofficial](https://kinopoiskapiunofficial.tech/user)
+```py
+obj_api = fa.API_Cinema('KEY')
+```
+____
+[:arrow_up:content](#content)
+____
+## Description of functions
+
+
+
+
+
 
 ```
 ~~Зачеркнутый текст~~
