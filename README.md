@@ -45,11 +45,11 @@ ____
 [:arrow_up:content](#content)
 ____
 ## Description of functions
-| tile | Description | Example of a regular expression|
+| tile | Description | Call example|
 |----:|:----:|:----------|
 | literal | Строка содержит символьный литерал literal | foo |
 | re1&#124;re2 | Строка содержит регулярные выражения `rel` или `re2` | foo&#124;bar |
-| re1&#124;re2 | Строка содержит регулярные выражения `rel` или `re2` | get_by_keyword(`text`) |
+| поиск по ключевуму слову | Принимает ввденённый текст и ищет совпадения | get_by_keyword(text) |
 
 
 
