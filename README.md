@@ -20,12 +20,9 @@
     
 ## introduction
 При использовании
-```
+This API is used to get data from the kinopoisk website
 ____
-```
-получается разделительная черта
-____
-[:arrow_up:Оглавление](#Оглавление)
+[:arrow_up:content](#content)
 ___
 ## Заголовки
 
