@@ -1,21 +1,21 @@
 
-import requests
-domen = 'https://kinopoiskapiunofficial.tech'
-key_api = '8ddff7e1-d699-4f01-aaf6-a98347651223'
-h = {
-    'X-API-KEY': key_api
-}
-
 class API_Cinema():
+    def __init__(self, key_api):
+        self.api_key = key_api
+        self.domen = 'https://kinopoiskapiunofficial.tech'
+        self.h = {
+            'X-API-KEY': key_api
+        }
+
     """ Films """
     def get_by_keyword(self, text):
         """Get list of films by keyword
         Args:
             text ([str]): [Текст который ввел пользователь]
         """
-        urls = domen + f'/api/v2.1/films/search-by-keyword?keyword={text}&page=1'
+        urls =self.domen + f'/api/v2.1/films/search-by-keyword?keyword={text}&page=1'
         print(urls +'\n\n\n\n')
-        request = requests.get(urls, headers=h)
+        request = requests.get(urls, headers=self.h)
         if(request.status_code == 200):
             return((request.json()))
         else:
@@ -30,8 +30,9 @@ class API_Cinema():
         Args:
             id_kinopoisk ([int]): [id Kinopoisk]
         """
-        urls = domen + f'/api/v2.1/films/{id_kinopoisk}?append_to_response={append_to_response}'
-        request = requests.get(urls, headers=h)
+        urls =self.domen + f'/api/v2.1/films/{id_kinopoisk}?append_to_response={append_to_response}'
+        h = self.h
+        request = requests.get(urls, headers=self.h)
         if(request.status_code == 200):
             return((request.json()))
         else:
@@ -46,9 +47,9 @@ class API_Cinema():
         Args:
             id_kinopoisk ([int]): [id Kinopoisk]
         """
-        urls = domen + f'/api/v2.1/films/{id_kinopoisk}/frames'
+        urls =self.domen + f'/api/v2.1/films/{id_kinopoisk}/frames'
         print(urls)
-        request = requests.get(urls, headers=h)
+        request = requests.get(urls, headers=self.h)
         if(request.status_code == 200):
             return((request.json()))
         else:
@@ -63,9 +64,9 @@ class API_Cinema():
         Args:
             id_kinopoisk ([int]): [id Kinopoisk]
         """
-        urls = domen + f'/api/v2.1/films/{id_kinopoisk}/videos'
+        urls =self.domen + f'/api/v2.1/films/{id_kinopoisk}/videos'
         print(urls)
-        request = requests.get(urls, headers=h)
+        request = requests.get(urls, headers=self.h)
         if(request.status_code == 200):
             return((request.json()))
         else:
@@ -80,9 +81,9 @@ class API_Cinema():
         Args:
             id_kinopoisk ([int]): [id Kinopoisk]
         """
-        urls = domen + f'/api/v2.1/films/{id_kinopoisk}/sequels_and_prequels'
+        urls =self.domen + f'/api/v2.1/films/{id_kinopoisk}/sequels_and_prequels'
         print(urls)
-        request = requests.get(urls, headers=h)
+        request = requests.get(urls, headers=self.h)
         if(request.status_code == 200):
             return((request.json()))
         else:
@@ -94,9 +95,9 @@ class API_Cinema():
         
         Получаем список фильмов фильма
         """
-        urls = domen + f'/api/v2.1/films/filters'
+        urls =self.domen + f'/api/v2.1/films/filters'
         print(urls)
-        request = requests.get(urls, headers=h)
+        request = requests.get(urls, headers=self.h)
         if(request.status_code == 200):
             return((request.json()))
         else:
@@ -122,7 +123,7 @@ class API_Cinema():
         Returns:
             [(list, optional)]: Данные по поиску
         """
-        urls = domen + f'/api/v2.1/films/search-by-filters?'
+        urls =self.domen + f'/api/v2.1/films/search-by-filters?'
 
         for el in genre:
             urls += f'genre={el}&'
@@ -137,7 +138,7 @@ class API_Cinema():
 
 
 
-        request = requests.get(urls, headers=h, params=p)
+        request = requests.get(urls, headers=self.h, params=p)
         # print(request.text)
         if(request.status_code == 200):
             return((request.json()))
@@ -157,9 +158,9 @@ class API_Cinema():
         Returns:
             [type]: [description]
         """
-        urls = domen + f'/api/v2.2/films/top?type={types}&page={page}'
+        urls =self.domen + f'/api/v2.2/films/top?type={types}&page={page}'
         print(urls)
-        request = requests.get(urls, headers=h)
+        request = requests.get(urls, headers=self.h)
         if(request.status_code == 200):
             return((request.json()))
         else:
@@ -176,9 +177,9 @@ class API_Cinema():
             [list]: similars film
         """
         
-        urls = domen + f'/api/v2.2/films/{id_kinopoisk}/similars'
+        urls =self.domen + f'/api/v2.2/films/{id_kinopoisk}/similars'
         print(urls)
-        request = requests.get(urls, headers=h)
+        request = requests.get(urls, headers=self.h)
         print(request)
         if(request.status_code == 200):
             return((request.json()))
@@ -196,9 +197,9 @@ class API_Cinema():
             [list]: similars film
         """
         
-        urls = domen + f'/api/v2.1/films/releases?year={year}&month={month}&page={page}'
+        urls =self.domen + f'/api/v2.1/films/releases?year={year}&month={month}&page={page}'
         print(urls)
-        request = requests.get(urls, headers=h)
+        request = requests.get(urls, headers=self.h)
         if(request.status_code == 200):
             return((request.json()))
         else:
@@ -213,9 +214,9 @@ class API_Cinema():
         Args:
             id_kinopoisk ([int]): [id Kinopoisk]
         """
-        urls = domen + f'/api/v2.1/films/{id_kinopoisk}/studios'
+        urls =self.domen + f'/api/v2.1/films/{id_kinopoisk}/studios'
         print(urls)
-        request = requests.get(urls, headers=h)
+        request = requests.get(urls, headers=self.h)
         if(request.status_code == 200):
             return((request.json()))
         else:
@@ -231,9 +232,9 @@ class API_Cinema():
         Args:
             id_kinopoisk ([int]): [id Kinopoisk]
         """
-        urls = domen + f'/api/v1/reviews?filmId={id_kinopoisk}&page={page}'
+        urls =self.domen + f'/api/v1/reviews?filmId={id_kinopoisk}&page={page}'
         print(urls)
-        request = requests.get(urls, headers=h)
+        request = requests.get(urls, headers=self.h)
         if(request.status_code == 200):
             return((request.json()))
         else:
@@ -248,9 +249,9 @@ class API_Cinema():
         Args:
             id_reviews ([int]): [id_reviews from get_reviews()]
         """
-        urls = domen + f'/api/v1/reviews/details?reviewId={id_reviews}'
+        urls =self.domen + f'/api/v1/reviews/details?reviewId={id_reviews}'
         print(urls)
-        request = requests.get(urls, headers=h)
+        request = requests.get(urls, headers=self.h)
         if(request.status_code == 200):
             return((request.json()))
         else:
@@ -266,9 +267,9 @@ class API_Cinema():
         Args:
             id_kinopoisk ([int]): [id Kinopoisk]
         """
-        urls = domen + f'/api/v1/staff?filmId={id_kinopoisk}'
+        urls =self.domen + f'/api/v1/staff?filmId={id_kinopoisk}'
         print(urls)
-        request = requests.get(urls, headers=h)
+        request = requests.get(urls, headers=self.h)
         if(request.status_code == 200):
             return((request.json()))
         else:
@@ -283,10 +284,14 @@ class API_Cinema():
         Args:
             id_person ([int]): [id person get in get_staff()]
         """
-        urls = domen + f'/api/v1/staff/{id_person}'
+        urls =self.domen + f'/api/v1/staff/{id_person}'
         print(urls)
-        request = requests.get(urls, headers=h)
+        request = requests.get(urls, headers=self.h)
         if(request.status_code == 200):
             return((request.json()))
         else:
             return False
+
+
+
+

@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+filmapis.egg-info/PKG-INFO
+filmapis.egg-info/SOURCES.txt
+filmapis.egg-info/dependency_links.txt
+filmapis.egg-info/not-zip-safe
+filmapis.egg-info/requires.txt
+filmapis.egg-info/top_level.txt

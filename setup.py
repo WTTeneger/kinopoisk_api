@@ -1,23 +1,29 @@
-import setuptools
+
+from setuptools import setup, find_packages
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 
-setuptools.setup(
-     name='kinopoisk_api',  
-     version='0.1',
-     scripts=['API_kinopoisk'] ,
-     author="Amal Agishev",
-     author_email="amalagishev.ru",
-     description="Api for working with data on kinopoisk",
-     long_description=long_description,
-   long_description_content_type="text/markdown",
-     url="https://github.com/WTTeneger/kinopoisk_api",
-     packages=setuptools.find_packages(),
-     classifiers=[
-         "Programming Language :: Python :: 3",
-         "License :: OSI Approved :: MIT License",
-         "Operating System :: OS Independent",
-     ],
- )
+setup(name='filmapis',
+      version='0.2',
+      description='The funniest joke in the world',
+      long_description=long_description,
+      classifiers=[
+        'Development Status :: 3 - Alpha',
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 2.7',
+        'Topic :: Text Processing :: Linguistic',
+      ],
+      keywords='funniest joke comedy flying circus',
+      url='https://github.com/WTTeneger/kinopoisk_api',
+      author='Amal Agishev',
+      author_email='swintages@gmail.com',
+      license='MIT',
+      packages=find_packages(),
+      install_requires=[
+          'markdown',
+          'requests',
+      ],
+      include_package_data=True,
+      zip_safe=False)
