@@ -4,7 +4,7 @@
 
 0. [introduction](#introduction)
 1. [Getting started](#Getting-started)
-2. [Работа с выделением текста](#Работа-с-выделением-текста)
+2. [Working with code](#Working-with-code)
 3. [Использование эмодзи (emoji)](#Использование-эмодзи-emoji)
 4. [Использование цитирования в тексте](#Использование-цитирования-в-тексте)
 5. [Подсветка кода](#Подсветка-кода)
@@ -33,7 +33,13 @@ ___
 ____
 [:arrow_up:content](#content)
 ____
-## Работа с выделением текста
+## Working with code
+
+###Creating an object is performed by passing the api key received from the site to the function 
+[site](https://kinopoiskapiunofficial.tech/user)
+```py
+object_api = API_Cinema('API-KEY')
+```
 
 ```
 ~~Зачеркнутый текст~~
